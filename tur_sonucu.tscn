@@ -64,8 +64,16 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_o5n17")
 metadata/_edit_lock_ = true
 
-[node name="Logo" type="Sprite2D" parent="." unique_id=1757603074]
-position = Vector2(645, 236.75)
+[node name="Logo" type="TextureRect" parent="." unique_id=805609271]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -249.0
+offset_top = 119.0
+offset_right = 317.0
+offset_bottom = 518.0
+grow_horizontal = 2
 scale = Vector2(0.8745583, 0.8784461)
 texture = ExtResource("1_20x65")
 

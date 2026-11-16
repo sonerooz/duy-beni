@@ -276,8 +276,19 @@ grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_fu3oq")
 
-[node name="Logo" type="Sprite2D" parent="SozlukPopup" unique_id=354936094]
-position = Vector2(645, 2000)
+[node name="Logo" type="TextureRect" parent="SozlukPopup" unique_id=2017386587]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -172.99997
+offset_top = -325.0
+offset_right = 393.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(0.6201413, 0.62030077)
 texture = ExtResource("4_5ya7d")
 

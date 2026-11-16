@@ -44,6 +44,16 @@ shadow_size = 50
 shadow_offset = Vector2(0, 30)
 anti_aliasing_size = 0.8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spqpc"]
+bg_color = Color(0.88, 0.7612, 0.40479997, 0.9372549)
+border_color = Color(0.9, 0.7029, 0.24299997, 1)
+shadow_color = Color(0.86, 0.69717336, 0.24940002, 0.68235296)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42trp"]
+bg_color = Color(0.88, 0.7612, 0.40479997, 0.9372549)
+border_color = Color(0.9, 0.7029, 0.24299997, 1)
+shadow_color = Color(0.86, 0.69717336, 0.24940002, 0.68235296)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5awr"]
 bg_color = Color(1, 0.7131886, 0, 0.85300004)
 corner_radius_top_left = 25
@@ -63,6 +73,38 @@ corner_radius_bottom_left = 25
 shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
 shadow_size = 60
 shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pg0q1"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rglha"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo6v6"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
 anti_aliasing_size = 0.8
 
 [node name="AYARLAR" type="Control" unique_id=1078174327]
@@ -85,21 +127,26 @@ texture = SubResource("GradientTexture2D_ar0mg")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Logo" type="Sprite2D" parent="texturerect" unique_id=1817877296]
-position = Vector2(645, 420)
-scale = Vector2(0.64708483, 0.6801378)
+[node name="Logo" type="TextureRect" parent="texturerect" unique_id=1235226397]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -283.0
+offset_top = 110.0
+offset_right = 283.0
+offset_bottom = 509.0
+grow_horizontal = 2
+scale = Vector2(1.0461572, 1.0242794)
 texture = ExtResource("3_spqpc")
 
 [node name="<-" type="Button" parent="texturerect" unique_id=1852334065]
 custom_minimum_size = Vector2(180, 50)
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.291
-anchor_bottom = 0.5
-offset_left = 96.0
-offset_top = 130.0
-offset_right = -1389.39
-offset_bottom = -1097.0
+offset_left = 90.0
+offset_top = 150.0
+offset_right = 270.0
+offset_bottom = 321.0
 size_flags_horizontal = 6
 size_flags_vertical = 4
 focus_mode = 0
@@ -120,9 +167,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -600.0
-offset_top = -600.0
+offset_top = -798.0
 offset_right = 600.0
-offset_bottom = 600.0
+offset_bottom = 1003.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 130
@@ -130,6 +177,7 @@ theme_override_constants/separation = 130
 [node name="DIL" type="Button" parent="VBoxContainer" unique_id=748876348]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_styles/normal = ExtResource("1_o5awr")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
@@ -137,6 +185,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
 theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
 
 [node name="SOL YAZI" type="Label" parent="VBoxContainer/DIL" unique_id=443939773]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -148,7 +197,6 @@ offset_bottom = 54.0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 80
-text = "DİL"
 
 [node name="SAG YAZI" type="Label" parent="VBoxContainer/DIL" unique_id=1921077350]
 layout_mode = 1
@@ -165,7 +213,64 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.834375, 0.6885766, 0.19816408, 1)
 theme_override_font_sizes/font_size = 80
-text = "TÜRKÇE"
+horizontal_alignment = 2
+
+[node name="dilsecici" type="OptionButton" parent="VBoxContainer/DIL" unique_id=854839785]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 15.0
+offset_right = 1164.0
+offset_bottom = 179.5
+theme_override_font_sizes/font_size = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_spqpc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_42trp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_42trp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_42trp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_42trp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_42trp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_42trp")
+
+[node name="TAKIM" type="Button" parent="VBoxContainer" unique_id=1516751275]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_styles/normal = ExtResource("1_o5awr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+
+[node name="SOL YAZI" type="Label" parent="VBoxContainer/TAKIM" unique_id=1560431734]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = -56.0
+offset_right = 317.0
+offset_bottom = 54.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 80
+text = "TAKIM"
+
+[node name="SAG YAZI" type="Label" parent="VBoxContainer/TAKIM" unique_id=1071247896]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -56.0
+offset_right = -150.0
+offset_bottom = 68.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "1"
 horizontal_alignment = 2
 
 [node name="SURE" type="Button" parent="VBoxContainer" unique_id=1456400878]
@@ -251,63 +356,9 @@ theme_override_font_sizes/font_size = 80
 text = "ORTA"
 horizontal_alignment = 2
 
-[node name="TAKIM" type="Button" parent="VBoxContainer" unique_id=1516751275]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
-theme_override_styles/normal = ExtResource("1_o5awr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
-theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
-theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
-
-[node name="SOL YAZI" type="Label" parent="VBoxContainer/TAKIM" unique_id=1560431734]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 70.0
-offset_top = -56.0
-offset_right = 317.0
-offset_bottom = 54.0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 80
-text = "TAKIM"
-
-[node name="SAG YAZI" type="Label" parent="VBoxContainer/TAKIM" unique_id=1071247896]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -56.0
-offset_right = -150.0
-offset_bottom = 68.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 90
-text = "2"
-horizontal_alignment = 2
-
 [node name="GECMIS" type="Button" parent="VBoxContainer" unique_id=737085486]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
-theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 theme_override_styles/normal = ExtResource("1_o5awr")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_o5awr")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8yk7b")
@@ -330,9 +381,36 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 80
 text = "OYUN GEÇMİŞİ"
 
+[node name="NASIL" type="Button" parent="VBoxContainer" unique_id=1968908769]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_o5awr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pg0q1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rglha")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mo6v6")
+
+[node name="SOL YAZI" type="Label" parent="VBoxContainer/NASIL" unique_id=1603817625]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -55.0
+offset_right = 306.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "NASIL OYNANIR"
+
 [connection signal="pressed" from="texturerect/<-" to="." method="_on_geri_pressed"]
 [connection signal="pressed" from="VBoxContainer/DIL" to="." method="_on_dil_pressed"]
+[connection signal="pressed" from="VBoxContainer/DIL/dilsecici" to="." method="_on_dilsecici_pressed"]
+[connection signal="pressed" from="VBoxContainer/TAKIM" to="." method="_on_takim_pressed"]
 [connection signal="pressed" from="VBoxContainer/SURE" to="." method="_on_sure_pressed"]
 [connection signal="pressed" from="VBoxContainer/ZORLUK" to="." method="_on_zorluk_pressed"]
-[connection signal="pressed" from="VBoxContainer/TAKIM" to="." method="_on_takim_pressed"]
 [connection signal="pressed" from="VBoxContainer/GECMIS" to="." method="_on_gecmis_pressed"]
+[connection signal="pressed" from="VBoxContainer/NASIL" to="." method="_on_nasil_pressed"]

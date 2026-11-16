@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://dhpox8kkkt15q"]
+
+[ext_resource type="Script" uid="uid://crcdv0sj6k6kh" path="res://nasil.gd" id="1_biq4o"]
+[ext_resource type="Texture2D" uid="uid://bcjn1t0gqbvip" path="res://LOGO.png" id="1_kyjmw"]
+[ext_resource type="StyleBox" uid="uid://edvx7mi2hnug" path="res://BUTONSTYL.tres" id="2_biq4o"]
+
+[sub_resource type="Gradient" id="Gradient_e86xg"]
+offsets = PackedFloat32Array(0.2664609, 0.5483539, 0.968107, 1)
+colors = PackedColorArray(0.8875, 0.68018556, 0.058242198, 1, 1, 0.8227356, 0.034375012, 1, 0.834375, 0.71183884, 0.16687499, 1, 0.98125, 0.8399078, 0.076660156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xo35g"]
+gradient = SubResource("Gradient_e86xg")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kns52"]
+
+[node name="Nasil" type="Control" unique_id=144069076]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_biq4o")
+
+[node name="texturerect" type="TextureRect" parent="." unique_id=958009148]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_xo35g")
+metadata/_edit_lock_ = true
+
+[node name="Logo" type="TextureRect" parent="texturerect" unique_id=387132605]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -283.0
+offset_top = 110.0
+offset_right = 283.0
+offset_bottom = 509.0
+grow_horizontal = 2
+scale = Vector2(1.0461572, 1.0242794)
+texture = ExtResource("1_kyjmw")
+
+[node name="<-" type="Button" parent="texturerect" unique_id=558313962]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 1
+offset_left = 90.0
+offset_top = 150.0
+offset_right = 270.0
+offset_bottom = 321.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.059374988, 0.026904292, 0.026904292, 1)
+theme_override_colors/font_hover_color = Color(0.056249976, 0.03322264, 0.03322264, 1)
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = ExtResource("2_biq4o")
+theme_override_styles/pressed = ExtResource("2_biq4o")
+theme_override_styles/hover = ExtResource("2_biq4o")
+theme_override_styles/focus = ExtResource("2_biq4o")
+text = "<"
+
+[node name="SOL YAZI" type="Label" parent="texturerect" unique_id=1561197733]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -306.0
+offset_top = 600.0
+offset_right = 306.0
+offset_bottom = 710.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "NASIL OYNANIR"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=90564419]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -611.0
+offset_top = -1967.0
+offset_right = 611.0
+offset_bottom = -398.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0.25, 0.20741667, 0.067499995, 1)
+theme_override_font_sizes/normal_font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kns52")
+
+[connection signal="pressed" from="texturerect/<-" to="." method="_on_geri_pressed"]

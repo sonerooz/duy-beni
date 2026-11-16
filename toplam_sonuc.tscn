@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://bcjn1t0gqbvip" path="res://LOGO.png" id="2_3poef"]
 [ext_resource type="StyleBox" uid="uid://edvx7mi2hnug" path="res://BUTONSTYL.tres" id="3_3w0dy"]
 
-[sub_resource type="Gradient" id="Gradient_e86xg"]
+[sub_resource type="Gradient" id="Gradient_hdljd"]
 offsets = PackedFloat32Array(0.2664609, 0.5483539, 0.968107, 1)
 colors = PackedColorArray(0.8875, 0.68018556, 0.058242198, 1, 1, 0.8227356, 0.034375012, 1, 0.834375, 0.71183884, 0.16687499, 1, 0.98125, 0.8399078, 0.076660156, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_7fsdt"]
-gradient = SubResource("Gradient_e86xg")
+gradient = SubResource("Gradient_hdljd")
 fill_to = Vector2(1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdljd"]
@@ -96,8 +96,16 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_7fsdt")
 metadata/_edit_lock_ = true
 
-[node name="Logo" type="Sprite2D" parent="." unique_id=1893705139]
-position = Vector2(645, 236.75)
+[node name="Logo" type="TextureRect" parent="." unique_id=1549394269]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -283.0
+offset_top = 110.0
+offset_right = 283.0
+offset_bottom = 509.0
+grow_horizontal = 2
 scale = Vector2(0.8745583, 0.8784461)
 texture = ExtResource("2_3poef")
 
@@ -146,12 +154,14 @@ icon_alignment = 1
 
 [node name="Label" type="Label" parent="." unique_id=1442267272]
 layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
 offset_top = 500.0
-offset_right = 1290.0
-offset_bottom = -1996.0
-grow_vertical = 2
+offset_right = 500.0
+offset_bottom = 692.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 140
 text = "SONUÇLAR"

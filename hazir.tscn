@@ -1,0 +1,165 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://bcjn1t0gqbvip" path="res://LOGO.png" id="1_20x65"]
+[ext_resource type="Script" path="res://hazir.gd" id="1_b654j"]
+[ext_resource type="StyleBox" uid="uid://edvx7mi2hnug" path="res://BUTONSTYL.tres" id="2_b654j"]
+
+[sub_resource type="Gradient" id="Gradient_20x65"]
+offsets = PackedFloat32Array(0.2664609, 0.5483539, 0.968107, 1)
+colors = PackedColorArray(0.8875, 0.68018556, 0.058242198, 1, 1, 0.8227356, 0.034375012, 1, 0.834375, 0.71183884, 0.16687499, 1, 0.98125, 0.8399078, 0.076660156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o5n17"]
+gradient = SubResource("Gradient_20x65")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b654j"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8pac"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_go731"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[node name="Hazir" type="Control" unique_id=1857534099]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b654j")
+
+[node name="texturerect" type="TextureRect" parent="." unique_id=580632731]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_o5n17")
+metadata/_edit_lock_ = true
+
+[node name="Logo" type="TextureRect" parent="." unique_id=805609271]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -249.0
+offset_top = 119.0
+offset_right = 317.0
+offset_bottom = 518.0
+grow_horizontal = 2
+scale = Vector2(0.8745583, 0.8784461)
+texture = ExtResource("1_20x65")
+
+[node name="basla" type="Button" parent="." unique_id=1477277914]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -375.0
+offset_top = -496.0
+offset_right = 375.0
+offset_bottom = -246.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("2_b654j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b654j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c8pac")
+theme_override_styles/focus = SubResource("StyleBoxFlat_go731")
+text = "BAŞLA"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1045417257]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -645.0
+offset_top = -850.0
+offset_right = 645.0
+offset_bottom = 850.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TAKIM" type="Label" parent="VBoxContainer" unique_id=581678222]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 125
+text = "TAKIM 1"
+horizontal_alignment = 1
+
+[node name="HAZIR" type="Label" parent="VBoxContainer" unique_id=185856562]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 125
+text = "HAZIR MISINIZ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SAYAC" type="Label" parent="VBoxContainer" unique_id=909510050]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 190
+text = ""
+horizontal_alignment = 1
+
+[node name="BILGI" type="Label" parent="VBoxContainer" unique_id=1250166673]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 125
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IPUCU" type="Label" parent="VBoxContainer" unique_id=929476863]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 190
+text = ""
+horizontal_alignment = 1
+
+[connection signal="pressed" from="basla" to="." method="_on_basla_pressed"]

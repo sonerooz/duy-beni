@@ -67,15 +67,23 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_3k0o2")
 metadata/_edit_lock_ = true
 
-[node name="Logo" type="Sprite2D" parent="texturerect" unique_id=472852912]
-position = Vector2(650, 342)
+[node name="Logo" type="TextureRect" parent="texturerect" unique_id=74610097]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -245.0
+offset_top = 145.0
+offset_right = 321.0
+offset_bottom = 544.0
+grow_horizontal = 2
 scale = Vector2(0.8745583, 0.8784461)
 texture = ExtResource("1_4tyii")
 
 [node name="<-" type="Button" parent="." unique_id=1525216306]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(180, 50)
-layout_mode = 0
+layout_mode = 1
 offset_left = 133.0
 offset_top = 116.0
 offset_right = 313.0
@@ -140,17 +148,17 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -500.0
-offset_top = 900.0
-offset_right = 500.0
-offset_bottom = 1120.0
+offset_left = -550.0
+offset_top = 830.0
+offset_right = 550.0
+offset_bottom = 1060.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.94375, 0.8714573, 0.63113284, 1)
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5ymn0")
 alignment = 1
 
-[node name="ACIKLAMA" type="Label" parent="." unique_id=843199457]
+[node name="ACIKLAMA" type="RichTextLabel" parent="." unique_id=659215859]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
@@ -158,16 +166,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -635.0
+offset_left = -600.0
 offset_top = -1196.0
-offset_right = 635.0
+offset_right = 600.0
 offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 80
+theme_override_colors/default_color = Color(0.27187502, 0.23194337, 0.23194337, 1)
+theme_override_font_sizes/normal_font_size = 90
 horizontal_alignment = 1
-autowrap_mode = 3
 
 [connection signal="pressed" from="<-" to="." method="_on_geri_pressed"]
 [connection signal="pressed" from="ANLAMI" to="." method="_on_anlami_pressed"]

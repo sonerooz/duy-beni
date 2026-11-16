@@ -156,6 +156,7 @@ clip_text = true
 icon_alignment = 1
 
 [node name="SÖZLÜK" type="Button" parent="VBoxContainer" unique_id=684972226]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(800, 250)
 layout_mode = 2
 focus_mode = 1
