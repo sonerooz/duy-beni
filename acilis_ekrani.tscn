@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://mwqytps6ktbr"]
+
+[ext_resource type="Script" uid="uid://dqi4kav2x56a5" path="res://acilis_ekrani.gd" id="1_4q8ao"]
+[ext_resource type="Texture2D" uid="uid://bwkfk02um8iqq" path="res://BASLANGIC.png" id="1_te6or"]
+
+[sub_resource type="Gradient" id="Gradient_4q8ao"]
+colors = PackedColorArray(0, 0, 0, 1, 1, 0.78039217, 0.015686275, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k454w"]
+gradient = SubResource("Gradient_4q8ao")
+fill = 1
+fill_to = Vector2(0.8905983, 0)
+
+[sub_resource type="Animation" id="Animation_4q8ao"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("radyal gecıs:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_k454w"]
+resource_name = "acilis_anim"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("radyal gecıs:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 1.4666667, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i7apu"]
+_data = {
+&"RESET": SubResource("Animation_4q8ao"),
+&"acilis_anim": SubResource("Animation_k454w")
+}
+
+[node name="AcilisEkrani" type="Control" unique_id=948789742]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4q8ao")
+
+[node name="radyal gecıs" type="TextureRect" parent="." unique_id=1484654281]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_k454w")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1469067555]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -390.0
+offset_right = 350.0
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(350, 390)
+texture = ExtResource("1_te6or")
+
+[node name="acilis_anim" type="AnimationPlayer" parent="." unique_id=1137459812]
+libraries/ = SubResource("AnimationLibrary_i7apu")
+autoplay = &"acilis_anim"

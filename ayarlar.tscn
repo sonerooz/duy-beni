@@ -1,0 +1,338 @@
+[gd_scene format=3 uid="uid://dutkdwr80a3jd"]
+
+[ext_resource type="Script" uid="uid://ddhu1upf8rhth" path="res://ayarlar.gd" id="1_8yk7b"]
+[ext_resource type="StyleBox" uid="uid://edvx7mi2hnug" path="res://BUTONSTYL.tres" id="1_o5awr"]
+[ext_resource type="Texture2D" uid="uid://bcjn1t0gqbvip" path="res://LOGO.png" id="3_spqpc"]
+
+[sub_resource type="Gradient" id="Gradient_mtqik"]
+offsets = PackedFloat32Array(0.2664609, 0.5483539, 0.968107, 1)
+colors = PackedColorArray(0.8875, 0.68018556, 0.058242198, 1, 1, 0.8227356, 0.034375012, 1, 0.834375, 0.71183884, 0.16687499, 1, 0.98125, 0.8399078, 0.076660156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ar0mg"]
+gradient = SubResource("Gradient_mtqik")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xo64b"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dikv3"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04fqd"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5awr"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yk7b"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[node name="AYARLAR" type="Control" unique_id=1078174327]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8yk7b")
+
+[node name="texturerect" type="TextureRect" parent="." unique_id=123664087]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ar0mg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Logo" type="Sprite2D" parent="texturerect" unique_id=1817877296]
+position = Vector2(645, 420)
+scale = Vector2(0.64708483, 0.6801378)
+texture = ExtResource("3_spqpc")
+
+[node name="<-" type="Button" parent="texturerect" unique_id=1852334065]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.291
+anchor_bottom = 0.5
+offset_left = 96.0
+offset_top = 130.0
+offset_right = -1389.39
+offset_bottom = -1097.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.059374988, 0.026904292, 0.026904292, 1)
+theme_override_colors/font_hover_color = Color(0.056249976, 0.03322264, 0.03322264, 1)
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = ExtResource("1_o5awr")
+theme_override_styles/pressed = ExtResource("1_o5awr")
+theme_override_styles/hover = ExtResource("1_o5awr")
+theme_override_styles/focus = ExtResource("1_o5awr")
+text = "<"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1847052723]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -600.0
+offset_right = 600.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 130
+
+[node name="DIL" type="Button" parent="VBoxContainer" unique_id=748876348]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_styles/normal = ExtResource("1_o5awr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+
+[node name="SOL YAZI" type="Label" parent="VBoxContainer/DIL" unique_id=443939773]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = -56.0
+offset_right = 270.0
+offset_bottom = 54.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "DİL"
+
+[node name="SAG YAZI" type="Label" parent="VBoxContainer/DIL" unique_id=1921077350]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -56.0
+offset_right = -98.0
+offset_bottom = 54.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.834375, 0.6885766, 0.19816408, 1)
+theme_override_font_sizes/font_size = 80
+text = "TÜRKÇE"
+horizontal_alignment = 2
+
+[node name="SURE" type="Button" parent="VBoxContainer" unique_id=1456400878]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_styles/normal = ExtResource("1_o5awr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+
+[node name="SOL YAZI" type="Label" parent="VBoxContainer/SURE" unique_id=70626986]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = -156.0
+offset_right = 370.0
+offset_bottom = -46.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "SÜRE"
+
+[node name="SAG YAZI" type="Label" parent="VBoxContainer/SURE" unique_id=1747255870]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -156.0
+offset_right = -100.0
+offset_bottom = -46.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "60sn."
+horizontal_alignment = 2
+
+[node name="ZORLUK" type="Button" parent="VBoxContainer" unique_id=1907404145]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_styles/normal = ExtResource("1_o5awr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+
+[node name="SOL YAZI" type="Label" parent="VBoxContainer/ZORLUK" unique_id=1121782658]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = -56.0
+offset_right = 384.0
+offset_bottom = 54.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "ZORLUK"
+
+[node name="SAG YAZI" type="Label" parent="VBoxContainer/ZORLUK" unique_id=693251413]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -56.0
+offset_right = -88.0
+offset_bottom = 54.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "ORTA"
+horizontal_alignment = 2
+
+[node name="TAKIM" type="Button" parent="VBoxContainer" unique_id=1516751275]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_styles/normal = ExtResource("1_o5awr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+
+[node name="SOL YAZI" type="Label" parent="VBoxContainer/TAKIM" unique_id=1560431734]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = -56.0
+offset_right = 317.0
+offset_bottom = 54.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 80
+text = "TAKIM"
+
+[node name="SAG YAZI" type="Label" parent="VBoxContainer/TAKIM" unique_id=1071247896]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -56.0
+offset_right = -150.0
+offset_bottom = 68.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "2"
+horizontal_alignment = 2
+
+[node name="GECMIS" type="Button" parent="VBoxContainer" unique_id=737085486]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_styles/normal = ExtResource("1_o5awr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o5awr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8yk7b")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+
+[node name="SOL YAZI" type="Label" parent="VBoxContainer/GECMIS" unique_id=29903851]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.0
+offset_top = -55.0
+offset_right = 283.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "OYUN GEÇMİŞİ"
+
+[connection signal="pressed" from="texturerect/<-" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="VBoxContainer/DIL" to="." method="_on_dil_pressed"]
+[connection signal="pressed" from="VBoxContainer/SURE" to="." method="_on_sure_pressed"]
+[connection signal="pressed" from="VBoxContainer/ZORLUK" to="." method="_on_zorluk_pressed"]
+[connection signal="pressed" from="VBoxContainer/TAKIM" to="." method="_on_takim_pressed"]
+[connection signal="pressed" from="VBoxContainer/GECMIS" to="." method="_on_gecmis_pressed"]

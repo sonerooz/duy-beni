@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://cajlhkb2wd4d2"]
+
+[ext_resource type="Texture2D" uid="uid://bcjn1t0gqbvip" path="res://LOGO.png" id="1_4tyii"]
+[ext_resource type="Script" uid="uid://ckbhauy0duppw" path="res://sozluk.gd" id="1_5ymn0"]
+[ext_resource type="StyleBox" uid="uid://edvx7mi2hnug" path="res://BUTONSTYL.tres" id="2_3k0o2"]
+
+[sub_resource type="Gradient" id="Gradient_xo64b"]
+offsets = PackedFloat32Array(0.2664609, 0.5483539, 0.968107, 1)
+colors = PackedColorArray(0.8875, 0.68018556, 0.058242198, 1, 1, 0.8227356, 0.034375012, 1, 0.834375, 0.71183884, 0.16687499, 1, 0.98125, 0.8399078, 0.076660156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3k0o2"]
+gradient = SubResource("Gradient_xo64b")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3t325"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmc7j"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etubc"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ymn0"]
+bg_color = Color(0.79, 0.65965, 0.2686, 0.7058824)
+
+[node name="Sözlük" type="Control" unique_id=173253162]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ymn0")
+
+[node name="texturerect" type="TextureRect" parent="." unique_id=2036063715]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_3k0o2")
+metadata/_edit_lock_ = true
+
+[node name="Logo" type="Sprite2D" parent="texturerect" unique_id=472852912]
+position = Vector2(650, 342)
+scale = Vector2(0.8745583, 0.8784461)
+texture = ExtResource("1_4tyii")
+
+[node name="<-" type="Button" parent="." unique_id=1525216306]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 0
+offset_left = 133.0
+offset_top = 116.0
+offset_right = 313.0
+offset_bottom = 287.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.059374988, 0.026904292, 0.026904292, 1)
+theme_override_colors/font_hover_color = Color(0.056249976, 0.03322264, 0.03322264, 1)
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = ExtResource("2_3k0o2")
+theme_override_styles/pressed = ExtResource("2_3k0o2")
+theme_override_styles/hover = ExtResource("2_3k0o2")
+theme_override_styles/focus = ExtResource("2_3k0o2")
+text = "<"
+
+[node name="BASLIK" type="Label" parent="." unique_id=540074476]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.0
+offset_top = 600.0
+offset_right = 230.0
+offset_bottom = 765.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "SÖZLÜK"
+horizontal_alignment = 1
+
+[node name="ANLAMI" type="Button" parent="." unique_id=336109532]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -198.0
+offset_right = 350.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.059374988, 0.026904292, 0.026904292, 1)
+theme_override_colors/font_hover_color = Color(0.056249976, 0.03322264, 0.03322264, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("2_3k0o2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3t325")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gmc7j")
+theme_override_styles/focus = SubResource("StyleBoxFlat_etubc")
+text = "ANLAMI"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=2087571622]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_top = 900.0
+offset_right = 500.0
+offset_bottom = 1120.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.94375, 0.8714573, 0.63113284, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ymn0")
+alignment = 1
+
+[node name="ACIKLAMA" type="Label" parent="." unique_id=843199457]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -635.0
+offset_top = -1196.0
+offset_right = 635.0
+offset_bottom = -196.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="<-" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="ANLAMI" to="." method="_on_anlami_pressed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

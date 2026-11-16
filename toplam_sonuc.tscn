@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://gokos6oy6s40"]
+
+[ext_resource type="Script" uid="uid://bk2kd3g3154q2" path="res://toplam_sonuc.gd" id="1_hdljd"]
+[ext_resource type="Texture2D" uid="uid://bcjn1t0gqbvip" path="res://LOGO.png" id="2_3poef"]
+[ext_resource type="StyleBox" uid="uid://edvx7mi2hnug" path="res://BUTONSTYL.tres" id="3_3w0dy"]
+
+[sub_resource type="Gradient" id="Gradient_e86xg"]
+offsets = PackedFloat32Array(0.2664609, 0.5483539, 0.968107, 1)
+colors = PackedColorArray(0.8875, 0.68018556, 0.058242198, 1, 1, 0.8227356, 0.034375012, 1, 0.834375, 0.71183884, 0.16687499, 1, 0.98125, 0.8399078, 0.076660156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7fsdt"]
+gradient = SubResource("Gradient_e86xg")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdljd"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3poef"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3w0dy"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gs841"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hefv"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i72fm"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[node name="Control" type="Control" unique_id=886378515]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdljd")
+
+[node name="texturerect" type="TextureRect" parent="." unique_id=359969469]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_7fsdt")
+metadata/_edit_lock_ = true
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1893705139]
+position = Vector2(645, 236.75)
+scale = Vector2(0.8745583, 0.8784461)
+texture = ExtResource("2_3poef")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1321713525]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -645.0
+offset_top = -896.0
+offset_right = 645.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 100
+
+[node name="yeni_oyun" type="Button" parent="VBoxContainer" unique_id=677131689]
+custom_minimum_size = Vector2(750, 280)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("3_3w0dy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hdljd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3poef")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3w0dy")
+text = "YENİ OYUN"
+icon_alignment = 1
+
+[node name="ana_menu" type="Button" parent="VBoxContainer" unique_id=1102136744]
+custom_minimum_size = Vector2(750, 280)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("3_3w0dy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gs841")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7hefv")
+theme_override_styles/focus = SubResource("StyleBoxFlat_i72fm")
+text = "ANA MENÜ"
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1442267272]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 500.0
+offset_right = 1290.0
+offset_bottom = -1996.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 140
+text = "SONUÇLAR"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=73529494]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -598.0
+offset_right = 600.0
+offset_bottom = 402.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 3
+
+[connection signal="pressed" from="VBoxContainer/yeni_oyun" to="." method="_on_yeni_oyun_pressed"]
+[connection signal="pressed" from="VBoxContainer/ana_menu" to="." method="_on_ana_menu_pressed"]

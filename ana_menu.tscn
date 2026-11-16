@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://rkmlkvilfpq"]
+
+[ext_resource type="Script" uid="uid://cjlotkcm2nhw3" path="res://ana_menu.gd" id="1_7h0q2"]
+[ext_resource type="Texture2D" uid="uid://bcjn1t0gqbvip" path="res://LOGO.png" id="2_n0vap"]
+[ext_resource type="StyleBox" uid="uid://edvx7mi2hnug" path="res://BUTONSTYL.tres" id="3_jhobn"]
+
+[sub_resource type="Gradient" id="Gradient_xo64b"]
+offsets = PackedFloat32Array(0.2664609, 0.5483539, 0.968107, 1)
+colors = PackedColorArray(0.8875, 0.68018556, 0.058242198, 1, 1, 0.8227356, 0.034375012, 1, 0.834375, 0.71183884, 0.16687499, 1, 0.98125, 0.8399078, 0.076660156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_chvfe"]
+gradient = SubResource("Gradient_xo64b")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="FontFile" id="FontFile_mouwp"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/65/0/ascent = 0.0
+cache/0/65/0/descent = 0.0
+cache/0/65/0/underline_position = 0.0
+cache/0/65/0/underline_thickness = 0.0
+cache/0/65/0/scale = 1.0
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xo64b"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dikv3"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04fqd"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5du41"]
+
+[node name="Ana Menü" type="Control" unique_id=642657936]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7h0q2")
+
+[node name="texturerect" type="TextureRect" parent="." unique_id=295143221]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_chvfe")
+
+[node name="siyah logo" type="TextureRect" parent="." unique_id=1113772240]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -549.0
+offset_top = 150.0
+offset_right = 549.0
+offset_bottom = 944.0
+grow_horizontal = 2
+texture = ExtResource("2_n0vap")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=374554431]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -1596.0
+offset_right = 400.0
+offset_bottom = -346.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(10, 70)
+mouse_filter = 2
+theme_override_constants/separation = 125
+
+[node name="OYUNA BAŞLA" type="Button" parent="VBoxContainer" unique_id=1461397785]
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_mouwp")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("3_jhobn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+text = "OYUNA BAŞLA"
+icon = SubResource("CanvasTexture_5du41")
+autowrap_trim_flags = 0
+clip_text = true
+icon_alignment = 1
+
+[node name="AYARLAR" type="Button" parent="VBoxContainer" unique_id=631053063]
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_mouwp")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("3_jhobn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+text = "AYARLAR"
+icon = SubResource("CanvasTexture_5du41")
+autowrap_trim_flags = 0
+clip_text = true
+icon_alignment = 1
+
+[node name="SÖZLÜK" type="Button" parent="VBoxContainer" unique_id=684972226]
+custom_minimum_size = Vector2(800, 250)
+layout_mode = 2
+focus_mode = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_mouwp")
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = ExtResource("3_jhobn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xo64b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dikv3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_04fqd")
+text = "SÖZLÜK"
+icon = SubResource("CanvasTexture_5du41")
+autowrap_trim_flags = 0
+clip_text = true
+icon_alignment = 1
+
+[connection signal="button_down" from="VBoxContainer/OYUNA BAŞLA" to="VBoxContainer/OYUNA BAŞLA" method="_on_button_down"]
+[connection signal="button_up" from="VBoxContainer/OYUNA BAŞLA" to="VBoxContainer/OYUNA BAŞLA" method="_on_button_up"]
+[connection signal="pressed" from="VBoxContainer/OYUNA BAŞLA" to="." method="_on_oyuna_basla_pressed"]
+[connection signal="button_down" from="VBoxContainer/AYARLAR" to="VBoxContainer/AYARLAR" method="_on_button_down"]
+[connection signal="button_up" from="VBoxContainer/AYARLAR" to="VBoxContainer/AYARLAR" method="_on_button_up"]
+[connection signal="pressed" from="VBoxContainer/AYARLAR" to="." method="_on_ayarlar_pressed"]
+[connection signal="button_down" from="VBoxContainer/SÖZLÜK" to="VBoxContainer/SÖZLÜK" method="_on_button_down"]
+[connection signal="button_up" from="VBoxContainer/SÖZLÜK" to="VBoxContainer/SÖZLÜK" method="_on_button_up"]
+[connection signal="pressed" from="VBoxContainer/SÖZLÜK" to="." method="_on_sozluk_pressed"]

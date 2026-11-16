@@ -1,0 +1,320 @@
+[gd_scene format=3 uid="uid://blbrheaht63j"]
+
+[ext_resource type="Script" uid="uid://dw2b0wjv38ift" path="res://oyun_ekrani.gd" id="1_q5d00"]
+[ext_resource type="StyleBox" uid="uid://edvx7mi2hnug" path="res://BUTONSTYL.tres" id="2_5ya7d"]
+[ext_resource type="Texture2D" uid="uid://bnl8up2r4p4xw" path="res://sozlukıcon.png" id="3_fu3oq"]
+[ext_resource type="Texture2D" uid="uid://bcjn1t0gqbvip" path="res://LOGO.png" id="4_5ya7d"]
+
+[sub_resource type="Gradient" id="Gradient_mtqik"]
+offsets = PackedFloat32Array(0.2664609, 0.5483539, 0.968107, 1)
+colors = PackedColorArray(0.8875, 0.68018556, 0.058242198, 1, 1, 0.8227356, 0.034375012, 1, 0.834375, 0.71183884, 0.16687499, 1, 0.98125, 0.8399078, 0.076660156, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mklcw"]
+gradient = SubResource("Gradient_mtqik")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nn5ly"]
+bg_color = Color(0.890625, 0.72834796, 0.23378906, 1)
+border_color = Color(0.35, 0.2695, 0.027999993, 0.8235294)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.675, 0.49874362, 0.11601563, 0.7176471)
+shadow_size = 30
+shadow_offset = Vector2(0, 25)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwife"]
+bg_color = Color(1, 0.7529412, 0, 1)
+border_color = Color(0.35, 0.2695, 0.027999993, 0.8235294)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.675, 0.49874362, 0.11601563, 0.7176471)
+shadow_size = 30
+shadow_offset = Vector2(0, 25)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvgof"]
+bg_color = Color(1, 0.7529412, 0, 1)
+border_color = Color(0.35, 0.2695, 0.027999993, 0.8235294)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.675, 0.49874362, 0.11601563, 0.7176471)
+shadow_size = 30
+shadow_offset = Vector2(0, 25)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ya7d"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_un0ru"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2674o"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x20io"]
+bg_color = Color(1, 0.7131886, 0, 0.85300004)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_46t6m"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 60
+shadow_offset = Vector2(0, 40)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjoaj"]
+bg_color = Color(1, 0.7137255, 0, 0.85490197)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.50625, 0.3700572, 0.069609374, 0.71900004)
+shadow_size = 50
+shadow_offset = Vector2(0, 30)
+anti_aliasing_size = 0.8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu3oq"]
+bg_color = Color(0.921875, 0.8003208, 0.46958005, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4lsq"]
+bg_color = Color(0.24062502, 0.20813596, 0.07293946, 1)
+
+[node name="OYUN_EKRANI" type="Control" unique_id=1221767971]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q5d00")
+
+[node name="texturerect" type="TextureRect" parent="." unique_id=1480831851]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_mklcw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=423317575]
+clip_contents = true
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 60.0
+offset_bottom = 460.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="<-" type="Button" parent="HBoxContainer" unique_id=848632672]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.059374988, 0.026904292, 0.026904292, 1)
+theme_override_colors/font_hover_color = Color(0.056249976, 0.03322264, 0.03322264, 1)
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = ExtResource("2_5ya7d")
+theme_override_styles/pressed = ExtResource("2_5ya7d")
+theme_override_styles/hover = ExtResource("2_5ya7d")
+theme_override_styles/focus = ExtResource("2_5ya7d")
+text = "<"
+
+[node name="Sayacetiketi" type="Label" parent="HBoxContainer" unique_id=42368248]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.040624976, 0.037832007, 0.037832007, 1)
+theme_override_font_sizes/font_size = 350
+horizontal_alignment = 1
+
+[node name="kelime_anlami" type="Button" parent="HBoxContainer" unique_id=1666213148]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = ExtResource("2_5ya7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nn5ly")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gwife")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pvgof")
+icon = ExtResource("3_fu3oq")
+expand_icon = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1785415184]
+autostart = true
+
+[node name="ANAKELIME" type="Label" parent="." unique_id=1202734615]
+custom_minimum_size = Vector2(850, 450)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -598.0
+offset_right = 600.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[node name="AksiyonButonlari" type="HBoxContainer" parent="." unique_id=44441633]
+clip_contents = true
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -796.0
+offset_bottom = -296.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(0, 25)
+pivot_offset_ratio = Vector2(0, 25)
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 5.0
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="PAS" type="Button" parent="AksiyonButonlari" unique_id=351481020]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = ExtResource("2_5ya7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5ya7d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_un0ru")
+theme_override_styles/focus = SubResource("StyleBoxFlat_2674o")
+text = "PAS"
+
+[node name="DOGRU" type="Button" parent="AksiyonButonlari" unique_id=1991506892]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = ExtResource("2_5ya7d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x20io")
+theme_override_styles/hover = SubResource("StyleBoxFlat_46t6m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rjoaj")
+text = "DOĞRU"
+
+[node name="SozlukPopup" type="Panel" parent="." unique_id=2000313579]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -625.0
+offset_top = -1100.0
+offset_right = 625.0
+offset_bottom = 1100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_fu3oq")
+
+[node name="Logo" type="Sprite2D" parent="SozlukPopup" unique_id=354936094]
+position = Vector2(645, 2000)
+scale = Vector2(0.6201413, 0.62030077)
+texture = ExtResource("4_5ya7d")
+
+[node name="AnlamEtiketi" type="Label" parent="SozlukPopup" unique_id=810403546]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -750.0
+offset_right = 600.0
+offset_bottom = 750.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.15, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="KapatButonu" type="Button" parent="SozlukPopup" unique_id=754118551]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_bottom = 145.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_r4lsq")
+text = "X"
+
+[connection signal="pressed" from="HBoxContainer/<-" to="." method="_on_geri_pressed"]
+[connection signal="pressed" from="HBoxContainer/kelime_anlami" to="." method="_on_kelime_anlami_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="AksiyonButonlari/PAS" to="." method="_on_pas_pressed"]
+[connection signal="pressed" from="AksiyonButonlari/DOGRU" to="." method="_on_dogru_pressed"]
+[connection signal="pressed" from="SozlukPopup/KapatButonu" to="." method="_on_kapat_buton_pressed"]
