@@ -49,6 +49,10 @@ func _on_oyuna_basla_pressed():
 	# 2. Oyuna gönder
 	get_tree().change_scene_to_file("res://oyun_ekrani.tscn")
 	
+# Android geri tuşu: ana menüde uygulamadan çıkar
+func geri_tusu():
+	get_tree().quit()
+
 func _on_ayarlar_pressed():
 	get_tree().change_scene_to_file("res://ayarlar.tscn")
 

@@ -111,6 +111,13 @@ func _on_pas_pressed():
 	Global.son_pas += 1
 	yeni_kelime_getir()
 
+# Android geri tuşu: sözlük penceresi açıksa önce onu kapat, değilse "<" gibi davran
+func geri_tusu():
+	if sozluk_popup.visible:
+		_on_kapat_buton_pressed()
+	else:
+		_on_geri_pressed()
+
 func _on_geri_pressed():
 	get_tree().change_scene_to_file("res://ana_menu.tscn")
 

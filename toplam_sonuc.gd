@@ -76,5 +76,9 @@ func _on_yeni_oyun_pressed():
 	else:
 		get_tree().change_scene_to_file("res://ana_menu.tscn")
 
+# Android geri tuşu: "ANA MENÜ" butonuyla aynı
+func geri_tusu():
+	_on_ana_menu_pressed()
+
 func _on_ana_menu_pressed():
 	get_tree().change_scene_to_file("res://ana_menu.tscn")

@@ -30,6 +30,21 @@ var sozluk_verisi = {}
 
 const SAVE_PATH = "user://oyun_gecmisi.save"
 
+# --- ANDROID GERİ TUŞU ---
+# project.godot'ta quit_on_go_back=false olduğu için geri tuşu uygulamayı
+# kapatmaz; bunun yerine açık ekranın "<" butonuyla aynı işi yapar.
+func _notification(what):
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		geri_tusuna_basildi()
+
+func geri_tusuna_basildi():
+	var sahne = get_tree().current_scene
+	if sahne == null: return
+	if sahne.has_method("geri_tusu"):
+		sahne.geri_tusu()               # ekranın kendi özel davranışı
+	elif sahne.has_method("_on_geri_pressed"):
+		sahne._on_geri_pressed()        # "<" butonu ile aynı iş
+
 func _ready():
 	sozluk_yukle()
 	kelime_listelerini_yukle()

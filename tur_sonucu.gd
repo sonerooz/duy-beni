@@ -18,6 +18,10 @@ func _ready():
 	# 3. Veriyi hem belleğe hem diske kaydet
 	Global.puanlari_kaydet()
 
+# Android geri tuşu: "DEVAM ET" ile aynı (skor zaten kaydedildi)
+func geri_tusu():
+	_on_devam_et_pressed()
+
 func _on_devam_et_pressed():
 	# Her zaman önce Toplam Sonuç ekranına gider, sıra orada kontrol edilir
 	get_tree().change_scene_to_file("res://toplam_sonuc.tscn")
