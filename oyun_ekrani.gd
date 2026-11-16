@@ -85,7 +85,8 @@ func dili_uygula():
 	var s = Global.soz()
 	if buton_dogru: _buton_metni_set(buton_dogru, s["DOGRU"])
 	if buton_pas: _buton_metni_set(buton_pas, s["PAS"])
-	if kelime_anla_butonu: _buton_metni_set(kelime_anla_butonu, s["ANLAMI"])
+	# "Anlamı" butonu sözlük ikonlu; üzerine yazı yazmıyoruz (ikon görünsün)
+	if kelime_anla_butonu: kelime_anla_butonu.text = ""
 	if kapat_butonu: kapat_butonu.text = s["GERI"]
 
 func _buton_metni_set(btn: Button, metin: String):
