@@ -13,11 +13,11 @@ var son_pas : int = 0
 # --- 2. YERELLEŞTİRME ---
 var yerellestirme = {
 	"TR": { "BASLA": "OYUNA BAŞLA", "AYARLAR": "AYARLAR", "SOZLUK": "SÖZLÜK", "DIL": "DİL", "SN": "sn.", "GECMIS": "OYUN GEÇMİŞİ", "GERI": "X", "KOLAY": "KOLAY", "ORTA": "ORTA", "ZOR": "ZOR", "ANLAMI": "ANLAMI", "PAS": "PAS", "DOGRU": "DOĞRU", "TAKIM": "TAKIM", "TUR SONUCU": "TUR SONUCU", "DEVAM ET": "DEVAM ET", "NASIL OYNANIR": "NASIL OYNANIR", "SONUCLAR": "SONUÇLAR",
-		"HAZIR": "HAZIR MISINIZ?", "TUR_BASLA": "BAŞLA", "SIRADAKI": "SIRADAKİ TAKIM", "YENI OYUN": "YENİ OYUN", "ANA MENU": "ANA MENÜ", "KAZANAN": "KAZANAN", "BERABERE": "BERABERE", "SKOR": "SKOR", "ANLATACAK": "Anlatıcı telefonu alsın", "ANLAM YOK": "Bu kelimenin sözlükte anlamı bulunmuyor." },
+		"HAZIR": "HAZIR MISINIZ?", "TUR_BASLA": "BAŞLA", "SIRADAKI": "SIRADAKİ TAKIM", "YENI OYUN": "YENİ OYUN", "ANA MENU": "ANA MENÜ", "KAZANAN": "KAZANAN", "BERABERE": "BERABERE", "SKOR": "SKOR", "ANLATACAK": "Anlatıcı telefonu alsın", "ANLAM YOK": "Bu kelimenin sözlükte anlamı bulunmuyor.", "SURE BITTI": "SÜRE BİTTİ!" },
 	"EN": { "BASLA": "NEW GAME", "AYARLAR": "SETTINGS", "SOZLUK": "DICTIONARY", "DIL": "LANGUAGE", "SN": "sec.", "GECMIS": "GAME HISTORY", "GERI": "X", "KOLAY": "EASY", "ORTA": "NORMAL", "ZOR": "HARD", "ANLAMI": "SEARCH", "PAS": "PASS", "DOGRU": "TRUE", "TAKIM": "TEAM", "TUR SONUCU": "ROUND RESULT", "DEVAM ET": "CONTINUE", "NASIL OYNANIR": "HOW TO PLAY", "SONUCLAR": "RESULTS",
-		"HAZIR": "ARE YOU READY?", "TUR_BASLA": "START", "SIRADAKI": "NEXT TEAM", "YENI OYUN": "NEW GAME", "ANA MENU": "MAIN MENU", "KAZANAN": "WINNER", "BERABERE": "DRAW", "SKOR": "SCORE", "ANLATACAK": "Explainer, take the phone", "ANLAM YOK": "No definition found for this word." },
+		"HAZIR": "ARE YOU READY?", "TUR_BASLA": "START", "SIRADAKI": "NEXT TEAM", "YENI OYUN": "NEW GAME", "ANA MENU": "MAIN MENU", "KAZANAN": "WINNER", "BERABERE": "DRAW", "SKOR": "SCORE", "ANLATACAK": "Explainer, take the phone", "ANLAM YOK": "No definition found for this word.", "SURE BITTI": "TIME'S UP!" },
 	"FR": { "BASLA": "COMMENCER", "AYARLAR": "PARAMÈTRES", "SOZLUK": "DICTIONNAIRE", "DIL": "LANGUE", "SN": "sec.", "GECMIS": "HISTORIQUE DU JEU", "GERI": "X", "KOLAY": "FACILE", "ORTA": "MOYEN", "ZOR": "DIFFICILE", "ANLAMI": "DÉFINITION", "PAS": "PASSER", "DOGRU": "VRAI", "TAKIM": "ÉQUIPE", "TUR SONUCU": "RÉSULTAT DU TOUR", "DEVAM ET": "CONTINUER", "NASIL OYNANIR": "COMMENT JOUER", "SONUCLAR": "RÉSULTATS",
-		"HAZIR": "ÊTES-VOUS PRÊTS ?", "TUR_BASLA": "COMMENCER", "SIRADAKI": "ÉQUIPE SUIVANTE", "YENI OYUN": "NOUVELLE PARTIE", "ANA MENU": "MENU PRINCIPAL", "KAZANAN": "GAGNANT", "BERABERE": "ÉGALITÉ", "SKOR": "SCORE", "ANLATACAK": "Le narrateur prend le téléphone", "ANLAM YOK": "Aucune définition trouvée." }
+		"HAZIR": "ÊTES-VOUS PRÊTS ?", "TUR_BASLA": "COMMENCER", "SIRADAKI": "ÉQUIPE SUIVANTE", "YENI OYUN": "NOUVELLE PARTIE", "ANA MENU": "MENU PRINCIPAL", "KAZANAN": "GAGNANT", "BERABERE": "ÉGALITÉ", "SKOR": "SCORE", "ANLATACAK": "Le narrateur prend le téléphone", "ANLAM YOK": "Aucune définition trouvée.", "SURE BITTI": "TEMPS ÉCOULÉ !" }
 }
 
 func soz() -> Dictionary:
@@ -298,6 +298,30 @@ func ses_cal(ad: String):
 	if _sesler.has(ad):
 		_ses_oynatici.stream = _sesler[ad]
 		_ses_oynatici.play()
+
+# Son saniyeler için: kalan saniyeye göre giderek tizleşen çift bip ("tık-tık")
+var _kalp_oynatici : AudioStreamPlayer
+var _kalp_sesleri = {}
+
+func kalp_atisi_cal(kalan: int):
+	if _kalp_oynatici == null:
+		_kalp_oynatici = AudioStreamPlayer.new()
+		add_child(_kalp_oynatici)
+	if not _kalp_sesleri.has(kalan):
+		var frekans = 660.0 * pow(1.19, 5 - clampi(kalan, 1, 5))   # 5→660Hz ... 1→~1320Hz
+		_kalp_sesleri[kalan] = _cift_bip(frekans)
+	_kalp_oynatici.stream = _kalp_sesleri[kalan]
+	_kalp_oynatici.play()
+
+func _cift_bip(frekans: float) -> AudioStreamWAV:
+	var a = _ses_uret(frekans, 0.09, 0.7)
+	var b = _ses_uret(frekans * 1.26, 0.11, 0.7)
+	var bosluk = PackedByteArray(); bosluk.resize(int(22050 * 0.06) * 2)
+	var w = AudioStreamWAV.new()
+	w.format = AudioStreamWAV.FORMAT_16_BITS
+	w.mix_rate = 22050
+	w.data = a.data + bosluk + b.data
+	return w
 
 func titret(ms: int):
 	if OS.has_feature("mobile"):
