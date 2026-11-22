@@ -19,7 +19,3 @@ func _on_button_down():
 func _on_button_up():
 	# TIKLAMAYI BIRAKINCA: Eski boyuta dön
 	target_scale = Vector2(1.0, 1.0)
-
-
-func _on_pressed() -> void:
-	pass # Replace with function body.

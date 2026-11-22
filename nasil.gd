@@ -35,11 +35,11 @@ func arayuz_metinlerini_guncelle():
 		var icerik = ""
 		match dil:
 			"TR":
-				icerik = "[center]Takım arkadaşına yasaklı kelimeleri kullanmadan ana kelimeyi anlatmaya çalış. Süre bitmeden en çok puanı topla![/center]"
+				icerik = "[center]Ekrandaki kelimeyi, kelimenin kendisini söylemeden takım arkadaşına anlat. Bilirse DOĞRU'ya, bilemezse PAS'a bas. Süre bitmeden en çok puanı topla![/center]"
 			"EN":
-				icerik = "[center]Try to explain the main word to your teammate without using forbidden words. Collect the most points before time runs out![/center]"
+				icerik = "[center]Describe the word on the screen to your teammate without saying the word itself. Tap CORRECT when they guess it, PASS to skip. Score as many points as you can before time runs out![/center]"
 			"FR":
-				icerik = "[center]Essayez d'expliquer le mot principal à votre coéquipier sans utiliser de mots interdits. Collectez le plus de points avant la fin du temps ![/center]"
+				icerik = "[center]Faites deviner le mot affiché à votre coéquipier sans prononcer le mot lui-même. Appuyez sur JUSTE quand il trouve, sur PASSER pour passer. Marquez un maximum de points avant la fin du temps ![/center]"
 		
 		rıch_label.bbcode_enabled = true
 		rıch_label.text = icerik
